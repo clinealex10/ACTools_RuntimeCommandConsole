@@ -1,6 +1,6 @@
 ## ACTools: Debug Console
 <p>
-    This debug console tool is for developers to create debug commands to can use during the game to amke it easier to debug and test the game.
+    This debug console tool is for developers to create debug commands to can use during the game to make it easier to debug and test the game.
     <br/>
     Feel free to use it for whatever. If you wouldn't mind, please credit me. It would be appreciated!
 </p>
