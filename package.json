@@ -1,0 +1,22 @@
+{
+  "name": "com.actools.debugconsole",
+  "version": "1.0.0",
+  "displayName": "ACTools: Debug Console",
+  "description": "This debug console tool is for developers to create debug commands to can use during the game to amke it easier to debug and test the game.",
+  "unity": "2019.4",
+  "dependencies": {
+    "com.unity.inputsystem": "1.0.0",
+    "com.unity.textmeshpro": "2.1.1"
+  },
+  "keywords": [
+    "actools",
+    "debugconsole",
+    "tool",
+    "utility"
+  ],
+  "author": {
+    "name": "Alex Cline",
+    "email": "clinealex10@gmail.com",
+    "url": "alexcline.games"
+  }
+}
