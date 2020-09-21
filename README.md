@@ -22,3 +22,5 @@
 <p>
     If you need to get in touch with me, please email me or @ me on Twitter. You can find those on my profile on GitHub.
 </p>
+
+[!INCLUDE [<ACTools_DebugConsole>](<Documentation~/ACTools_DebugConsole.md>)]
