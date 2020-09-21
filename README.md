@@ -14,7 +14,7 @@
     <b>In the Package Manager, use the following git URL: https://github.com/Cpt-Jack04/ACTools_Core.git</b>
     <br/>
     <br/>
-    Be sure that the package is installed in your assets folder and you should be all good at that this point.
+    Be sure that the package is installed in your assets folder and you should be all good at that this point. Be sure to check to documentation file for how to create your own debug commands.
 </p>
 
 <p>
