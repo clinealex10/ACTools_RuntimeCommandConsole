@@ -54,9 +54,9 @@ namespace ACTools.DebugConsole
         /// <summary> Toogles the Debug Console GUI on and off. </summary>
         public void OnToggleConsole()
         {
+            InputValue = "";
             debugCanvas.enabled = !debugCanvas.enabled;
             suggestionView.gameObject.SetActive(false);
-            InputValue = "";
 
             if (ShowConsole)
                 inputField.Select();
