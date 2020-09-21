@@ -16,8 +16,14 @@
 		<ul>
 			<li>
 				<p>id - ID of the command. This is what the debug console is looking for.</p>
+			</il>
+			<li>
 				<p>description - What the command does.</p>
+			</il>
+			<li>
 				<p>format - How to write the command in the debub console.</p>
+			</il>
+			<li>
 				<p>newCommand - The action that is called when the command is invoked.</p>
 			</il>
 		</ul>
