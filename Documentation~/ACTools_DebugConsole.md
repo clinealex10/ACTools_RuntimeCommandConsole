@@ -47,7 +47,7 @@
 		</ul>
 	</li>
 	<li>
-		<p>Add your new command to the command list at the end of the public static void InitializeCommandList(ref List<object> CommandList) method.</p>
+		<p>Add your new command to the list at the end of the public static void InitializeCommandList(ref List<object> CommandList) method.</p>
 	</li>
 </ol>
 <hr/>
