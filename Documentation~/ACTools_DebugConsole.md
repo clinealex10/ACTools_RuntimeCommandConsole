@@ -17,7 +17,7 @@
 		<p>Commands with <i><parameter></i> take in a value for the you to enter after you type a command into the input field. 
 		Be sure to leave a single space bewteen the command and the parameter.</p>
 	</li>
-</o1>
+</ol>
 <hr/>
 
 ### How to create your own debug command:
