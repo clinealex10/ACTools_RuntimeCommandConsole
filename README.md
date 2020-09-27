@@ -7,12 +7,24 @@
 
 ## Installation:
 <p>
-    Make sure the new input system and text mesh pro are in your package, otherwise this package will not work.
+    <b>For easy updates, use the following git URL through the Package Manager: https://github.com/mob-sakai/UpmGitExtension.git</b>
     <br/>
-    At the moment, you will need to download a .zip file from a release, unzip it, and then import the .unitypackage file into the assets folder in your project. Hopefully, I will be able to get this package working with the UPM in the future.
+    <i>&nbsp;&nbsp;&nbsp;&nbsp;I guess you could use a submodule as well, but I can't help you with that.</i>
+</p>
+<p>
+    <b>In the Package Manager, use the following git URL: https://github.com/Cpt-Jack04/ACTools_DebugConsole.git</b>
     <br/>
+    In the Unity Editor, go to Tools>ACTools>Debug Console>Initialize Console. Click the "Generate Required Folders" button, wait for the folders to be generated, then click the "Generate Required Assets".
     <br/>
-    Be sure that the package is installed in your assets folder and you should be all good at that this point. You can check to documentation file for how to create your own debug commands.
+    In the Project Window, navigate to Assets/Resources/ACTools/Prefabs and open the Debug Console Prefab there. Open the "Events" dropdown and open the "Debug" dropdown.
+    <br/>
+    You will need to add some listeners to a few events.
+    <br/>
+    <ul>
+        <li>In the "Toggle Console" event, add the "Debug Controller" ScriptableObject. Then select the "CreateOrToggleConsole" method as the function.</li>
+        <li>In the "Submit" event, add the "Debug Controller" ScriptableObject. Then select the "OnSubmit" method as the function.</li>
+        <li>In the "Select Input Field" event, add the "Debug Controller" ScriptableObject. Then select the "SelectInputField" method as the function.</li>
+    </ul>
 </p>
 
 <p>

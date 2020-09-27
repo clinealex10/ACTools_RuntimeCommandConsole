@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.InputSystem.InputAction;
 
 namespace ACTools.DebugConsole
 {
     //[CreateAssetMenu(fileName = "New Debug Controller", menuName = "ACTools/Debug Console/Debug Controller")]
+    [System.Serializable]
     public class DebugController : ScriptableObject
     {
         public static DebugController Instance { get; protected set; } = null;
@@ -13,14 +15,16 @@ namespace ACTools.DebugConsole
         private List<object> commandList = new List<object>();
         public List<object> CommandList => commandList;
 
-        [SerializeField]
-        private GameObject consolePrefab = null;
-        public GameObject ConsolePrefab => consolePrefab;
+        public GameObject ConsolePrefab { get; private set; } = null;
 
         [RuntimeInitializeOnLoadMethod]
         public static void Initialize()
         {
-            Instance = Resources.Load<DebugController>("ACTools/ScriptableObjects/Debug Controller");
+            if (Instance == null)
+                Instance = Resources.Load<DebugController>("ACTools/ScriptableObjects/Debug Controller");
+            if (Instance.ConsolePrefab == null)
+                Instance.ConsolePrefab = Resources.Load<GameObject>("ACTools/Prefabs/Debug Console");
+
             GameObject newConsole = Instantiate(Instance.ConsolePrefab);
             Instance.Console = newConsole.GetComponent<DebugConsole>();
 

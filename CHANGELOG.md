@@ -3,7 +3,10 @@
 
 ## [Unreleased Changes]
 <ul>
-	<li> </il>
+	<li>Package moved into the Packages folder.</il>
+	<li>DebugConsoleInitializer.cs created to initialize the Debug Controller asset and the Debug Console Prefab.</il>
+	<li>Updates to README.md to match set up process.</il>
+	<li>Updates to ACTools.Core</il>
 </ul>
 <hr/>
 
