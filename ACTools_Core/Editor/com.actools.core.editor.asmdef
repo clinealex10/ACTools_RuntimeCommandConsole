@@ -1,0 +1,17 @@
+{
+    "name": "com.actools.core.editor",
+    "references": [
+        "GUID:97d3a34ecf4c34e49992afd531182dea"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

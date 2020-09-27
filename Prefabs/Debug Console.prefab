@@ -602,18 +602,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 53cf223443f3525438ea7086d0fa3b2e, type: 2}
-        m_MethodName: CreateOrToggleConsole
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: c02496c7-5047-4ac8-a360-60f4e2794845
     m_ActionName: Debug/Toggle Console[/Keyboard/backquote]
   - m_PersistentCalls:
@@ -621,18 +610,7 @@ MonoBehaviour:
     m_ActionId: fb127277-21ad-410e-b71b-2552f826fd66
     m_ActionName: Debug/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 53cf223443f3525438ea7086d0fa3b2e, type: 2}
-        m_MethodName: OnSubmit
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 88510871-8685-4144-84fb-248a2fc4b937
     m_ActionName: Debug/Submit[/Keyboard/enter]
   - m_PersistentCalls:
@@ -668,18 +646,7 @@ MonoBehaviour:
     m_ActionId: ec193b5e-0cdc-4998-a881-fad9cca6621d
     m_ActionName: Debug/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 53cf223443f3525438ea7086d0fa3b2e, type: 2}
-        m_MethodName: SelectInputField
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: c3ef8712-88bd-415e-9d87-868c00c1e956
     m_ActionName: Debug/Toggle Input Field Selected[/Keyboard/tab]
   m_NeverAutoSwitchControlSchemes: 0

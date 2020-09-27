@@ -1,0 +1,18 @@
+{
+  "name": "com.actools.core",
+  "version": "1.0.0",
+  "displayName": "ACTools: Core",
+  "description": "This package contains core parts to ACTools packages. This includes things like extension methods, custom attributes, and dependencies for other ACTools that are made.",
+  "unity": "2019.4",
+  "keywords": [
+    "actools",
+    "core",
+    "library",
+    "utility"
+  ],
+  "author": {
+    "name": "Alex Cline",
+    "email": "clinealex10@gmail.com",
+    "url": "alexcline.games"
+  }
+}
