@@ -3,12 +3,17 @@
 
 ## [Unreleased Changes]
 <ul>
+	<li> </il>
+</ul>
+<hr/>
+
+## [1.1.0] - 2020-09-27
+<ul>
 	<li>Package moved into the Packages folder.</il>
 	<li>DebugConsoleInitializer.cs created to initialize the Debug Controller asset and the Debug Console Prefab.</il>
 	<li>Updates to README.md to match set up process.</il>
 	<li>Updates to ACTools.Core</il>
 </ul>
-<hr/>
 
 ## [1.0.0] - 2020-09-21
 
