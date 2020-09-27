@@ -18,14 +18,13 @@
     <br/>
     In the Project Window, navigate to Assets/Resources/ACTools/Prefabs and open the Debug Console Prefab there. Open the "Events" dropdown and open the "Debug" dropdown.
     <br/>
-    You will need to add some listeners to a few events.
-    <br/>
-    <ul>
-        <li>In the "Toggle Console" event, add the "Debug Controller" ScriptableObject. Then select the "CreateOrToggleConsole" method as the function.</li>
-        <li>In the "Submit" event, add the "Debug Controller" ScriptableObject. Then select the "OnSubmit" method as the function.</li>
-        <li>In the "Select Input Field" event, add the "Debug Controller" ScriptableObject. Then select the "SelectInputField" method as the function.</li>
-    </ul>
+    With the Debug Console Prefab still open, navigate to Assets/Resources/ACTools/ScriptableObjects. You will need to add some listeners from the Debug Controller to a few events.
 </p>
+<ol>
+    <li>In the "Toggle Console" event, add the "Debug Controller" ScriptableObject. Then select the "CreateOrToggleConsole" method as the function.</li>
+    <li>In the "Submit" event, add the "Debug Controller" ScriptableObject. Then select the "OnSubmit" method as the function.</li>
+    <li>In the "Select Input Field" event, add the "Debug Controller" ScriptableObject. Then select the "SelectInputField" method as the function.</li>
+</ol>
 
 <p>
     If you need to get in touch with me, please email me or @ me on Twitter. You can find those on my profile on GitHub.
