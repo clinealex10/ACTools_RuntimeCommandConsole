@@ -26,8 +26,8 @@
 		<p>Add <i>using ACTools.RuntimeCommandConsole</i> to the top of the file.</p>
 	</li>
 	<li>
-		<p>Inside your <i>Start()</i> method, type Console.AddCommand.</p>
-		<p>Below are the parameters for the Console.AddCommand and the Console.AddCommand<T1> method.</p>
+		<p>Inside your <i>Start()</i> method, type CommandCollection.AddCommand.</p>
+		<p>Below are the parameters for the CommandCollection.AddCommand and the CommandCollection.AddCommand<T1> method.</p>
 		<ul>
 			<li>
 				<p>id - ID of the command. This is what the debug console is looking for.</p>
