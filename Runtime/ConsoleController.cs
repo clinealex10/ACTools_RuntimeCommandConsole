@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.InputSystem.InputAction;
 
-namespace ACTools.DebugConsole
+namespace ACTools.RuntimeCommandConsole
 {
     //[CreateAssetMenu(fileName = "New Debug Controller", menuName = "ACTools/Debug Console/Debug Controller")]
     [System.Serializable]
-    public class DebugController : ScriptableObject
+    public class ConsoleController : ScriptableObject
     {
-        public static DebugController Instance { get; protected set; } = null;
+        public static ConsoleController Instance { get; protected set; } = null;
 
-        public DebugConsole Console { get; private set; } = null;
-        private List<object> commandList = new List<object>();
-        public List<object> CommandList => commandList;
+        public ConsoleCanvas Console { get; private set; } = null;
+
+        public List<object> CommandList => CommandCollection.CommandList;
 
         public GameObject ConsolePrefab { get; private set; } = null;
 
@@ -21,14 +21,18 @@ namespace ACTools.DebugConsole
         public static void Initialize()
         {
             if (Instance == null)
-                Instance = Resources.Load<DebugController>("ACTools/ScriptableObjects/Debug Controller");
+                Instance = Resources.Load<ConsoleController>("ACTools/ScriptableObjects/Console Controller");
             if (Instance.ConsolePrefab == null)
-                Instance.ConsolePrefab = Resources.Load<GameObject>("ACTools/Prefabs/Debug Console");
+                Instance.ConsolePrefab = Resources.Load<GameObject>("ACTools/Prefabs/Console Canvas");
 
             GameObject newConsole = Instantiate(Instance.ConsolePrefab);
-            Instance.Console = newConsole.GetComponent<DebugConsole>();
+            Instance.Console = newConsole.GetComponent<ConsoleCanvas>();
 
-            ListOfDebugCommands.InitializeCommandList(ref Instance.commandList);
+            CommandCollection.AddCommand("help", "Displays all of the commands this console has.", "help", () => Instance.Console.OnToggleHelp());
+            CommandCollection.AddCommand("command_console_creator", 
+                                                "Prints the creator of this debug console to the Unity Console.", 
+                                                "debug_console_creator", 
+                                                () => Debug.Log("ACTools: Runtime Command Console - Created by Alex Cline"));
         }
 
         /// <summary> Toggles the debug console. If it's not within the scene, one will be created. </summary>
@@ -71,18 +75,18 @@ namespace ACTools.DebugConsole
 
             for (int index = 0; index < CommandList.Count; index++)
             {
-                DebugCommandBase commandBase = CommandList[index] as DebugCommandBase;
+                CommandBase commandBase = CommandList[index] as CommandBase;
 
                 if (Console.InputValue.Contains(commandBase.CommandId))
                 {
-                    if (CommandList[index] as DebugCommand != null)
-                        (CommandList[index] as DebugCommand).Invoke();
-                    else if (CommandList[index] as DebugCommand<int> != null)
-                        (CommandList[index] as DebugCommand<int>).Invoke(int.Parse(parameters[1]));
-                    else if (CommandList[index] as DebugCommand<float> != null)
-                        (CommandList[index] as DebugCommand<float>).Invoke(float.Parse(parameters[1]));
-                    else if (CommandList[index] as DebugCommand<string> != null)
-                        (CommandList[index] as DebugCommand<string>).Invoke(parameters[1]);
+                    if (CommandList[index] as Command != null)
+                        (CommandList[index] as Command).Invoke();
+                    else if (CommandList[index] as Command<int> != null)
+                        (CommandList[index] as Command<int>).Invoke(int.Parse(parameters[1]));
+                    else if (CommandList[index] as Command<float> != null)
+                        (CommandList[index] as Command<float>).Invoke(float.Parse(parameters[1]));
+                    else if (CommandList[index] as Command<string> != null)
+                        (CommandList[index] as Command<string>).Invoke(parameters[1]);
                 }
             }
         }

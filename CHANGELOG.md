@@ -2,8 +2,26 @@
 <p> All notable changes to this project will be documented in this file. </p>
 
 ## [Unreleased Changes]
+
+### Changes:
 <ul>
 	<li> </il>
+</ul>
+<hr/>
+
+## [1.2.0] - 2020-09-30
+
+### Additions:
+<ul>
+	<li>Methods added to RuntimeCommandCollection.cs to allow for commands to be added through code from other scripts.</il>
+</ul>
+<hr/>
+
+### Changes:
+<ul>
+	<li>Renaming of whole project to RuntimeCommandConsole.</il>
+	<li>List of commands moved to be stored by RuntimeCommandCollection.cs.</il>
+	<li>ACTools_RuntimeCommandConsole.md was updated to match new process for created custom commands.</il>
 </ul>
 <hr/>
 

@@ -1,7 +1,6 @@
 ﻿using System.IO;
 using UnityEngine;
 using UnityEditor;
-using System.Threading.Tasks;
 
 [HelpURL("https://wiki.unity3d.com/index.php/CreateScriptableObjectAsset")] // Reference to orignal concept.
 public static class ScriptableObjectUtility
