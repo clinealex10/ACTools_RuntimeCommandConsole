@@ -1,5 +1,5 @@
 {
-    "name": "com.actools.debugconsole.editor",
+    "name": "com.actools.runtimecommandconsole.editor",
     "references": [
         "GUID:75469ad4d38634e559750d17036d5f7c",
         "GUID:1c15b5fc7c88681498d59b0305d6855e",

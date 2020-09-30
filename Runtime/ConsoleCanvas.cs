@@ -3,9 +3,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-namespace ACTools.DebugConsole
+namespace ACTools.RuntimeCommandConsole
 {
-    public class DebugConsole : MonoBehaviour
+    public class ConsoleCanvas : MonoBehaviour
     {
         [SerializeField] private Canvas debugCanvas = null;
 
@@ -41,14 +41,9 @@ namespace ACTools.DebugConsole
             helpView.gameObject.SetActive(false);
         }
 
-        private void Start()
-        {
-            DrawScrollingItems(helpContent, DebugController.Instance.CommandList);
-        }
-
         private void OnDestroy()
         {
-            DebugController.Instance.RemoveConsole();
+            ConsoleController.Instance.RemoveConsole();
         }
 
         /// <summary> Toogles the Debug Console GUI on and off. </summary>
@@ -65,6 +60,9 @@ namespace ACTools.DebugConsole
         /// <summary> Toogles the help GUI on and off. </summary>
         public void OnToggleHelp()
         {
+            if (!helpView.gameObject.activeSelf)
+                DrawScrollingItems(helpContent, ConsoleController.Instance.CommandList);
+
             helpView.gameObject.SetActive(!helpView.gameObject.activeSelf);
         }
 
@@ -86,11 +84,11 @@ namespace ACTools.DebugConsole
             if (!InputValue.Equals(""))
             {
                 List<object> commandsContainingInput = new List<object>();
-                for (int index = 0; index < DebugController.Instance.CommandList.Count; index++)
+                for (int index = 0; index < ConsoleController.Instance.CommandList.Count; index++)
                 {
-                    DebugCommandBase commandBase = DebugController.Instance.CommandList[index] as DebugCommandBase;
+                    CommandBase commandBase = ConsoleController.Instance.CommandList[index] as CommandBase;
                     if (commandBase.CommandId.Contains(InputValue))
-                        commandsContainingInput.Add(DebugController.Instance.CommandList[index]);
+                        commandsContainingInput.Add(ConsoleController.Instance.CommandList[index]);
                 }
 
                 if (commandsContainingInput.Count > 0)
@@ -112,7 +110,7 @@ namespace ACTools.DebugConsole
         {
             for (int index = 0; index < objList.Count; index++)
             {
-                DebugCommandBase commandBase = objList[index] as DebugCommandBase;
+                CommandBase commandBase = objList[index] as CommandBase;
 
                 string label = $"   {commandBase.CommandFormat} - {commandBase.CommandDescription}";
 

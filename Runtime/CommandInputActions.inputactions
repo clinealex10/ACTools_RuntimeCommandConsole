@@ -1,8 +1,8 @@
 {
-    "name": "DebugInputActions",
+    "name": "CommandInputActions",
     "maps": [
         {
-            "name": "Debug",
+            "name": "Command Map",
             "id": "568ecf9a-1a6d-409f-8276-a2328a2bef65",
             "actions": [
                 {

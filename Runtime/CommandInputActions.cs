@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/ACTools_DebugConsole/Runtime/DebugInputActions.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Packages/com.actools.runtimecommandconsole/Runtime/CommandInputActions.inputactions'
 
 using System;
 using System.Collections;
@@ -6,18 +6,18 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-namespace ACTools.DebugConsole
+namespace ACTools.RuntimeCommandConsole
 {
-    public class @DebugInputActions : IInputActionCollection, IDisposable
+    public class @CommandInputActions : IInputActionCollection, IDisposable
     {
         public InputActionAsset asset { get; }
-        public @DebugInputActions()
+        public @CommandInputActions()
         {
             asset = InputActionAsset.FromJson(@"{
-    ""name"": ""DebugInputActions"",
+    ""name"": ""CommandInputActions"",
     ""maps"": [
         {
-            ""name"": ""Debug"",
+            ""name"": ""Command Map"",
             ""id"": ""568ecf9a-1a6d-409f-8276-a2328a2bef65"",
             ""actions"": [
                 {
@@ -624,20 +624,20 @@ namespace ACTools.DebugConsole
         }
     ]
 }");
-            // Debug
-            m_Debug = asset.FindActionMap("Debug", throwIfNotFound: true);
-            m_Debug_Navigate = m_Debug.FindAction("Navigate", throwIfNotFound: true);
-            m_Debug_Submit = m_Debug.FindAction("Submit", throwIfNotFound: true);
-            m_Debug_Cancel = m_Debug.FindAction("Cancel", throwIfNotFound: true);
-            m_Debug_Point = m_Debug.FindAction("Point", throwIfNotFound: true);
-            m_Debug_Click = m_Debug.FindAction("Click", throwIfNotFound: true);
-            m_Debug_ScrollWheel = m_Debug.FindAction("ScrollWheel", throwIfNotFound: true);
-            m_Debug_MiddleClick = m_Debug.FindAction("MiddleClick", throwIfNotFound: true);
-            m_Debug_RightClick = m_Debug.FindAction("RightClick", throwIfNotFound: true);
-            m_Debug_TrackedDevicePosition = m_Debug.FindAction("TrackedDevicePosition", throwIfNotFound: true);
-            m_Debug_TrackedDeviceOrientation = m_Debug.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
-            m_Debug_ToggleConsole = m_Debug.FindAction("Toggle Console", throwIfNotFound: true);
-            m_Debug_SelectInputField = m_Debug.FindAction("Select Input Field", throwIfNotFound: true);
+            // Command Map
+            m_CommandMap = asset.FindActionMap("Command Map", throwIfNotFound: true);
+            m_CommandMap_Navigate = m_CommandMap.FindAction("Navigate", throwIfNotFound: true);
+            m_CommandMap_Submit = m_CommandMap.FindAction("Submit", throwIfNotFound: true);
+            m_CommandMap_Cancel = m_CommandMap.FindAction("Cancel", throwIfNotFound: true);
+            m_CommandMap_Point = m_CommandMap.FindAction("Point", throwIfNotFound: true);
+            m_CommandMap_Click = m_CommandMap.FindAction("Click", throwIfNotFound: true);
+            m_CommandMap_ScrollWheel = m_CommandMap.FindAction("ScrollWheel", throwIfNotFound: true);
+            m_CommandMap_MiddleClick = m_CommandMap.FindAction("MiddleClick", throwIfNotFound: true);
+            m_CommandMap_RightClick = m_CommandMap.FindAction("RightClick", throwIfNotFound: true);
+            m_CommandMap_TrackedDevicePosition = m_CommandMap.FindAction("TrackedDevicePosition", throwIfNotFound: true);
+            m_CommandMap_TrackedDeviceOrientation = m_CommandMap.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+            m_CommandMap_ToggleConsole = m_CommandMap.FindAction("Toggle Console", throwIfNotFound: true);
+            m_CommandMap_SelectInputField = m_CommandMap.FindAction("Select Input Field", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -684,84 +684,84 @@ namespace ACTools.DebugConsole
             asset.Disable();
         }
 
-        // Debug
-        private readonly InputActionMap m_Debug;
-        private IDebugActions m_DebugActionsCallbackInterface;
-        private readonly InputAction m_Debug_Navigate;
-        private readonly InputAction m_Debug_Submit;
-        private readonly InputAction m_Debug_Cancel;
-        private readonly InputAction m_Debug_Point;
-        private readonly InputAction m_Debug_Click;
-        private readonly InputAction m_Debug_ScrollWheel;
-        private readonly InputAction m_Debug_MiddleClick;
-        private readonly InputAction m_Debug_RightClick;
-        private readonly InputAction m_Debug_TrackedDevicePosition;
-        private readonly InputAction m_Debug_TrackedDeviceOrientation;
-        private readonly InputAction m_Debug_ToggleConsole;
-        private readonly InputAction m_Debug_SelectInputField;
-        public struct DebugActions
+        // Command Map
+        private readonly InputActionMap m_CommandMap;
+        private ICommandMapActions m_CommandMapActionsCallbackInterface;
+        private readonly InputAction m_CommandMap_Navigate;
+        private readonly InputAction m_CommandMap_Submit;
+        private readonly InputAction m_CommandMap_Cancel;
+        private readonly InputAction m_CommandMap_Point;
+        private readonly InputAction m_CommandMap_Click;
+        private readonly InputAction m_CommandMap_ScrollWheel;
+        private readonly InputAction m_CommandMap_MiddleClick;
+        private readonly InputAction m_CommandMap_RightClick;
+        private readonly InputAction m_CommandMap_TrackedDevicePosition;
+        private readonly InputAction m_CommandMap_TrackedDeviceOrientation;
+        private readonly InputAction m_CommandMap_ToggleConsole;
+        private readonly InputAction m_CommandMap_SelectInputField;
+        public struct CommandMapActions
         {
-            private @DebugInputActions m_Wrapper;
-            public DebugActions(@DebugInputActions wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Navigate => m_Wrapper.m_Debug_Navigate;
-            public InputAction @Submit => m_Wrapper.m_Debug_Submit;
-            public InputAction @Cancel => m_Wrapper.m_Debug_Cancel;
-            public InputAction @Point => m_Wrapper.m_Debug_Point;
-            public InputAction @Click => m_Wrapper.m_Debug_Click;
-            public InputAction @ScrollWheel => m_Wrapper.m_Debug_ScrollWheel;
-            public InputAction @MiddleClick => m_Wrapper.m_Debug_MiddleClick;
-            public InputAction @RightClick => m_Wrapper.m_Debug_RightClick;
-            public InputAction @TrackedDevicePosition => m_Wrapper.m_Debug_TrackedDevicePosition;
-            public InputAction @TrackedDeviceOrientation => m_Wrapper.m_Debug_TrackedDeviceOrientation;
-            public InputAction @ToggleConsole => m_Wrapper.m_Debug_ToggleConsole;
-            public InputAction @SelectInputField => m_Wrapper.m_Debug_SelectInputField;
-            public InputActionMap Get() { return m_Wrapper.m_Debug; }
+            private @CommandInputActions m_Wrapper;
+            public CommandMapActions(@CommandInputActions wrapper) { m_Wrapper = wrapper; }
+            public InputAction @Navigate => m_Wrapper.m_CommandMap_Navigate;
+            public InputAction @Submit => m_Wrapper.m_CommandMap_Submit;
+            public InputAction @Cancel => m_Wrapper.m_CommandMap_Cancel;
+            public InputAction @Point => m_Wrapper.m_CommandMap_Point;
+            public InputAction @Click => m_Wrapper.m_CommandMap_Click;
+            public InputAction @ScrollWheel => m_Wrapper.m_CommandMap_ScrollWheel;
+            public InputAction @MiddleClick => m_Wrapper.m_CommandMap_MiddleClick;
+            public InputAction @RightClick => m_Wrapper.m_CommandMap_RightClick;
+            public InputAction @TrackedDevicePosition => m_Wrapper.m_CommandMap_TrackedDevicePosition;
+            public InputAction @TrackedDeviceOrientation => m_Wrapper.m_CommandMap_TrackedDeviceOrientation;
+            public InputAction @ToggleConsole => m_Wrapper.m_CommandMap_ToggleConsole;
+            public InputAction @SelectInputField => m_Wrapper.m_CommandMap_SelectInputField;
+            public InputActionMap Get() { return m_Wrapper.m_CommandMap; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
             public bool enabled => Get().enabled;
-            public static implicit operator InputActionMap(DebugActions set) { return set.Get(); }
-            public void SetCallbacks(IDebugActions instance)
+            public static implicit operator InputActionMap(CommandMapActions set) { return set.Get(); }
+            public void SetCallbacks(ICommandMapActions instance)
             {
-                if (m_Wrapper.m_DebugActionsCallbackInterface != null)
+                if (m_Wrapper.m_CommandMapActionsCallbackInterface != null)
                 {
-                    @Navigate.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnNavigate;
-                    @Navigate.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnNavigate;
-                    @Navigate.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnNavigate;
-                    @Submit.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnSubmit;
-                    @Submit.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnSubmit;
-                    @Submit.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnSubmit;
-                    @Cancel.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnCancel;
-                    @Cancel.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnCancel;
-                    @Cancel.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnCancel;
-                    @Point.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnPoint;
-                    @Point.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnPoint;
-                    @Point.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnPoint;
-                    @Click.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnClick;
-                    @Click.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnClick;
-                    @Click.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnClick;
-                    @ScrollWheel.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnScrollWheel;
-                    @ScrollWheel.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnScrollWheel;
-                    @ScrollWheel.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnScrollWheel;
-                    @MiddleClick.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnMiddleClick;
-                    @MiddleClick.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnMiddleClick;
-                    @MiddleClick.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnMiddleClick;
-                    @RightClick.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnRightClick;
-                    @RightClick.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnRightClick;
-                    @RightClick.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnRightClick;
-                    @TrackedDevicePosition.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnTrackedDevicePosition;
-                    @TrackedDevicePosition.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnTrackedDevicePosition;
-                    @TrackedDevicePosition.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnTrackedDevicePosition;
-                    @TrackedDeviceOrientation.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnTrackedDeviceOrientation;
-                    @TrackedDeviceOrientation.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnTrackedDeviceOrientation;
-                    @TrackedDeviceOrientation.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnTrackedDeviceOrientation;
-                    @ToggleConsole.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnToggleConsole;
-                    @ToggleConsole.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnToggleConsole;
-                    @ToggleConsole.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnToggleConsole;
-                    @SelectInputField.started -= m_Wrapper.m_DebugActionsCallbackInterface.OnSelectInputField;
-                    @SelectInputField.performed -= m_Wrapper.m_DebugActionsCallbackInterface.OnSelectInputField;
-                    @SelectInputField.canceled -= m_Wrapper.m_DebugActionsCallbackInterface.OnSelectInputField;
+                    @Navigate.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnNavigate;
+                    @Navigate.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnNavigate;
+                    @Navigate.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnNavigate;
+                    @Submit.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnSubmit;
+                    @Submit.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnSubmit;
+                    @Submit.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnSubmit;
+                    @Cancel.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnCancel;
+                    @Cancel.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnCancel;
+                    @Cancel.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnCancel;
+                    @Point.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnPoint;
+                    @Point.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnPoint;
+                    @Point.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnPoint;
+                    @Click.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnClick;
+                    @Click.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnClick;
+                    @Click.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnClick;
+                    @ScrollWheel.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnScrollWheel;
+                    @ScrollWheel.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnScrollWheel;
+                    @ScrollWheel.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnScrollWheel;
+                    @MiddleClick.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnMiddleClick;
+                    @MiddleClick.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnMiddleClick;
+                    @MiddleClick.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnMiddleClick;
+                    @RightClick.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnRightClick;
+                    @RightClick.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnRightClick;
+                    @RightClick.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnRightClick;
+                    @TrackedDevicePosition.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnTrackedDevicePosition;
+                    @TrackedDevicePosition.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnTrackedDevicePosition;
+                    @TrackedDevicePosition.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnTrackedDevicePosition;
+                    @TrackedDeviceOrientation.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnTrackedDeviceOrientation;
+                    @TrackedDeviceOrientation.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnTrackedDeviceOrientation;
+                    @TrackedDeviceOrientation.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnTrackedDeviceOrientation;
+                    @ToggleConsole.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnToggleConsole;
+                    @ToggleConsole.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnToggleConsole;
+                    @ToggleConsole.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnToggleConsole;
+                    @SelectInputField.started -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnSelectInputField;
+                    @SelectInputField.performed -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnSelectInputField;
+                    @SelectInputField.canceled -= m_Wrapper.m_CommandMapActionsCallbackInterface.OnSelectInputField;
                 }
-                m_Wrapper.m_DebugActionsCallbackInterface = instance;
+                m_Wrapper.m_CommandMapActionsCallbackInterface = instance;
                 if (instance != null)
                 {
                     @Navigate.started += instance.OnNavigate;
@@ -803,7 +803,7 @@ namespace ACTools.DebugConsole
                 }
             }
         }
-        public DebugActions @Debug => new DebugActions(this);
+        public CommandMapActions @CommandMap => new CommandMapActions(this);
         private int m_KeyboardMouseSchemeIndex = -1;
         public InputControlScheme KeyboardMouseScheme
         {
@@ -849,7 +849,7 @@ namespace ACTools.DebugConsole
                 return asset.controlSchemes[m_GamepadSchemeIndex];
             }
         }
-        public interface IDebugActions
+        public interface ICommandMapActions
         {
             void OnNavigate(InputAction.CallbackContext context);
             void OnSubmit(InputAction.CallbackContext context);

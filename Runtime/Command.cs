@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ACTools.DebugConsole
+namespace ACTools.RuntimeCommandConsole
 {
-    public class DebugCommandBase
+    public class CommandBase
     {
         private string commandId = "";
         private string commandDescription = "";
@@ -16,7 +16,7 @@ namespace ACTools.DebugConsole
         /// <param name="id"> ID of the command. </param>
         /// <param name="description"> What the command does. </param>
         /// <param name="format"> How to write the command. </param>
-        public DebugCommandBase(string id, string description, string format)
+        public CommandBase(string id, string description, string format)
         {
             commandId = id;
             commandDescription = description;
@@ -24,7 +24,7 @@ namespace ACTools.DebugConsole
         }
     }
 
-    public class DebugCommand : DebugCommandBase
+    public class Command : CommandBase
     {
         private Action command;
 
@@ -33,7 +33,7 @@ namespace ACTools.DebugConsole
         /// <param name="description"> What the command does. </param>
         /// <param name="format"> How to write the command. </param>
         /// <param name="newCommand"> The action that is called when the command is invoked. </param>
-        public DebugCommand(string id, string description, string format, Action newCommand) : base (id, description, format)
+        public Command(string id, string description, string format, Action newCommand) : base (id, description, format)
         {
             command = newCommand;
         }
@@ -45,7 +45,7 @@ namespace ACTools.DebugConsole
         }
     }
 
-    public class DebugCommand<T1> : DebugCommandBase
+    public class Command<T1> : CommandBase
     {
         private Action<T1> command;
 
@@ -54,7 +54,7 @@ namespace ACTools.DebugConsole
         /// <param name="description"> What the command does. </param>
         /// <param name="format"> How to write the command. </param>
         /// <param name="newCommand"> The action that is called when the command is invoked. </param>
-        public DebugCommand(string id, string description, string format, Action<T1> newCommand) : base (id, description, format)
+        public Command(string id, string description, string format, Action<T1> newCommand) : base (id, description, format)
         {
             command = newCommand;
         }
