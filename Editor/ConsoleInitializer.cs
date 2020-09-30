@@ -91,8 +91,10 @@ namespace ACTools.RuntimeCommandConsole
                 AssetDatabase.CopyAsset(packagePathToConsolePrefab, assetPathToConsolePrefab);
             else
                 Debug.LogAssertion("Your console prefab is already initialized.");
-/*
-            setupInput.SetEnabled(true);*/
+
+            Close();
+            /*
+                        setupInput.SetEnabled(true);*/
         }
 /*
         /// <summary> Sets up the input for the users during Runtime. </summary>

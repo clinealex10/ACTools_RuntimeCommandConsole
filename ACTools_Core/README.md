@@ -19,5 +19,7 @@
 </p>
 
 <p>
-  If you need to get in touch with me, please email me or @ me on Twitter. You can find those on my profile on GitHub.
+  If you need to get in touch with me, please email me or @ me on Twitter. You can find those on my profile on GitHub. If you feel like supporting me, click the button down below.
 </p>
+
+<a href="https://www.buymeacoffee.com/alexcline" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 7.5px !important;width: 27.13px !important;" ></a>

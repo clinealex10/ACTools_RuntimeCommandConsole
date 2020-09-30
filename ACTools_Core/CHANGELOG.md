@@ -2,6 +2,16 @@
 <p> All notable changes to this project will be documented in this file. </p>
 
 ## [Unreleased Changes]
+
+### Changes:
+<ul>
+	<li> </il>
+</ul>
+<hr/>
+
+## [1.0.1] - 2020-09-30
+
+### Changes:
 <ul>
 	<li>Small changes to FolderUtility.CreateFolders(string path).</il>
 </ul>
