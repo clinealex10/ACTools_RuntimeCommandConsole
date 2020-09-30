@@ -15,7 +15,7 @@
 	</li>
 	<li>
 		<p>Commands with <i>< parameter ></i> take in a value for the you to enter after you type a command into the input field. 
-		Be sure to leave a single space bewteen the command and the parameter.</p>
+		Be sure to leave a single space between the command and the parameter.</p>
 	</li>
 </ol>
 <hr/>

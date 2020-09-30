@@ -30,9 +30,14 @@
     <li>In the "Submit" event, add the "Console Controller" ScriptableObject. Then select the "OnSubmit" method as the function.</li>
     <li>In the "Select Input Field" event, add the "Console Controller" ScriptableObject. Then select the "SelectInputField" method as the function.</li>
 </ol>
+<p>
+    To open the console, press the grave accent key (`).
+</p>
 
 <p>
-    If you need to get in touch with me, please email me or @ me on Twitter. You can find those on my profile on GitHub.
+  If you need to get in touch with me, please email me or @ me on Twitter. You can find those on my profile on GitHub. If you feel like supporting me, click the button down below.
 </p>
+
+<a href="https://www.buymeacoffee.com/alexcline" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 7.5px !important;width: 27.13px !important;" ></a>
 
 [!INCLUDE [<ACTools_RuntimeCommandConsole>](</Documentation~/ACTools_RuntimeCommandConsole.md>)]
