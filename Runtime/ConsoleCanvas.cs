@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
+using TMPro;
 
 namespace ACTools.RuntimeCommandConsole
 {
@@ -31,7 +31,7 @@ namespace ACTools.RuntimeCommandConsole
 
         public bool ShowConsole => debugCanvas.enabled;
         public bool ShowHelp => helpView.gameObject.activeSelf;
-        public string InputValue { get => inputField.text; set => inputField.text = value; }
+        internal string InputValue { get => inputField.text; set => inputField.text = value; }
 
         private void Awake()
         {
@@ -44,10 +44,11 @@ namespace ACTools.RuntimeCommandConsole
         private void OnDestroy()
         {
             ConsoleController.Instance.RemoveConsole();
+            CommandCollection.ResetList();
         }
 
         /// <summary> Toogles the Debug Console GUI on and off. </summary>
-        public void OnToggleConsole()
+        internal void OnToggleConsole()
         {
             InputValue = "";
             debugCanvas.enabled = !debugCanvas.enabled;
@@ -58,7 +59,7 @@ namespace ACTools.RuntimeCommandConsole
         }
 
         /// <summary> Toogles the help GUI on and off. </summary>
-        public void OnToggleHelp()
+        internal void OnToggleHelp()
         {
             if (!helpView.gameObject.activeSelf)
                 DrawScrollingItems(helpContent, ConsoleController.Instance.CommandList);
@@ -67,14 +68,14 @@ namespace ACTools.RuntimeCommandConsole
         }
 
         /// <summary> Selects the input field. </summary>
-        public void SelectInputField()
+        internal void SelectInputField()
         {
             if (ShowConsole)
                 inputField.Select();
         }
 
         /// <summary> Creates the button suggestion elements. </summary>
-        public void DrawSuggestions()
+        internal void DrawSuggestions()
         {
             for (int index = suggestionContent.transform.childCount - 1; index >= 0; index--)
             {
@@ -122,6 +123,7 @@ namespace ACTools.RuntimeCommandConsole
                 newItem.GetComponentInChildren<TMP_Text>().text = label;
                 newItem.GetComponent<Button>().onClick.AddListener(() => {
                     InputValue = newItem.name;
+                    inputField.caretPosition = InputValue.ToCharArray().Length + 1;
                     SelectInputField();
                 });
             }

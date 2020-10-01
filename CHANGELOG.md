@@ -3,9 +3,16 @@
 
 ## [Unreleased Changes]
 
+### Additions:
+<ul>
+	<li>ResetList() method added to CommandCollections.cs.</il>
+	<li>ResetList() called in ConsoleCavas.cs's OnDestroyMethod.</il>
+</ul>
+
 ### Changes:
 <ul>
-	<li> </il>
+	<li>Changes made to better allow for extension from users.</il>
+	<li>Bug Fix: Caret not going to end of input value when click a help button or suggestion button.</il>
 </ul>
 <hr/>
 

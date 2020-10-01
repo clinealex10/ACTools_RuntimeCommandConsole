@@ -45,23 +45,23 @@ namespace ACTools.RuntimeCommandConsole
         }
     }
 
-    public class Command<T1> : CommandBase
+    public class Command<T0> : CommandBase
     {
-        private Action<T1> command;
+        private Action<T0> command;
 
         /// <summary> Constructor for the debug command. </summary>
         /// <param name="id"> ID of the command. </param>
         /// <param name="description"> What the command does. </param>
         /// <param name="format"> How to write the command. </param>
         /// <param name="newCommand"> The action that is called when the command is invoked. </param>
-        public Command(string id, string description, string format, Action<T1> newCommand) : base (id, description, format)
+        public Command(string id, string description, string format, Action<T0> newCommand) : base (id, description, format)
         {
             command = newCommand;
         }
 
         /// <summary> Executes this command's function. </summary>
         /// <param name="value"> The value being based to this command's function. </param>
-        public void Invoke(T1 value)
+        public void Invoke(T0 value)
         {
             command.Invoke(value);
         }
