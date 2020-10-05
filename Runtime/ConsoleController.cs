@@ -37,7 +37,7 @@ namespace ACTools.RuntimeCommandConsole
 
         /// <summary> Toggles the debug console. If it's not within the scene, one will be created. </summary>
         /// <param name="context"> Context of the input provide by the user. </param>
-        internal void CreateOrToggleConsole(CallbackContext context)
+        public void CreateOrToggleConsole(CallbackContext context)
         {
             if (!context.performed)
                 return;
@@ -47,7 +47,7 @@ namespace ACTools.RuntimeCommandConsole
 
         /// <summary> Executes on the input within the text box. </summary>
         /// <param name="context"> Context of the input provide by the user. </param>
-        internal void OnSubmit(CallbackContext context)
+        public void OnSubmit(CallbackContext context)
         {
             if (!context.performed)
                 return;
@@ -60,7 +60,7 @@ namespace ACTools.RuntimeCommandConsole
         }
 
         /// <summary> Selects the input field. </summary>
-        internal void SelectInputField(CallbackContext context)
+        public void SelectInputField(CallbackContext context)
         {
             if (!context.performed && Console.ShowConsole)
                 return;

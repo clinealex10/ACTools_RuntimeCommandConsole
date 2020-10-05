@@ -8,7 +8,14 @@
 </ul>
 <hr/>
 
-## [1.2.2]
+## [1.2.3] - 2020-10-05
+### Changes:
+<ul>
+	<li>Bug Fix: Issue where methods needed during instillation process aren't visable in the inspector.</il>
+</ul>
+<hr/>
+
+## [1.2.2] - 2020-10-05
 ### Changes:
 <ul>
 	<li>Updated package.json because I forgot to do it for 1.2.1.</il>
