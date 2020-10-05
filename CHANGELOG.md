@@ -8,6 +8,13 @@
 </ul>
 <hr/>
 
+## [1.2.2]
+### Changes:
+<ul>
+	<li>Updated package.json because I forgot to do it for 1.2.1.</il>
+</ul>
+<hr/>
+
 ## [1.2.1] - 2020-10-04
 
 ### Additions:
