@@ -5,8 +5,8 @@ using static UnityEngine.InputSystem.InputAction;
 
 namespace ACTools.RuntimeCommandConsole
 {
-    //[CreateAssetMenu(fileName = "New Debug Controller", menuName = "ACTools/Debug Console/Debug Controller")]
-    [System.Serializable]
+    //[CreateAssetMenu(fileName = "Console Controller", menuName = "Tools/ACTools/Runtime Command Console/Console Controller")]
+    [Serializable]
     public class ConsoleController : ScriptableObject
     {
         public static ConsoleController Instance { get; protected set; } = null;
@@ -18,7 +18,7 @@ namespace ACTools.RuntimeCommandConsole
         public GameObject ConsolePrefab { get; private set; } = null;
 
         [RuntimeInitializeOnLoadMethod]
-        public static void Initialize()
+        internal static void Initialize()
         {
             if (Instance == null)
                 Instance = Resources.Load<ConsoleController>("ACTools/ScriptableObjects/Console Controller");
@@ -37,7 +37,7 @@ namespace ACTools.RuntimeCommandConsole
 
         /// <summary> Toggles the debug console. If it's not within the scene, one will be created. </summary>
         /// <param name="context"> Context of the input provide by the user. </param>
-        public void CreateOrToggleConsole(CallbackContext context)
+        internal void CreateOrToggleConsole(CallbackContext context)
         {
             if (!context.performed)
                 return;
@@ -47,7 +47,7 @@ namespace ACTools.RuntimeCommandConsole
 
         /// <summary> Executes on the input within the text box. </summary>
         /// <param name="context"> Context of the input provide by the user. </param>
-        public void OnSubmit(CallbackContext context)
+        internal void OnSubmit(CallbackContext context)
         {
             if (!context.performed)
                 return;
@@ -60,7 +60,7 @@ namespace ACTools.RuntimeCommandConsole
         }
 
         /// <summary> Selects the input field. </summary>
-        public void SelectInputField(CallbackContext context)
+        internal void SelectInputField(CallbackContext context)
         {
             if (!context.performed && Console.ShowConsole)
                 return;
@@ -69,7 +69,7 @@ namespace ACTools.RuntimeCommandConsole
         }
 
         /// <summary> Reads the input of the user. </summary>
-        public void HandleInput()
+        internal void HandleInput()
         {
             string[] parameters = Console.InputValue.Split(' ');
 
@@ -78,21 +78,27 @@ namespace ACTools.RuntimeCommandConsole
                 CommandBase commandBase = CommandList[index] as CommandBase;
 
                 if (Console.InputValue.Contains(commandBase.CommandId))
-                {
-                    if (CommandList[index] as Command != null)
-                        (CommandList[index] as Command).Invoke();
-                    else if (CommandList[index] as Command<int> != null)
-                        (CommandList[index] as Command<int>).Invoke(int.Parse(parameters[1]));
-                    else if (CommandList[index] as Command<float> != null)
-                        (CommandList[index] as Command<float>).Invoke(float.Parse(parameters[1]));
-                    else if (CommandList[index] as Command<string> != null)
-                        (CommandList[index] as Command<string>).Invoke(parameters[1]);
-                }
+                    InvokeCommandBasedOnType(index, parameters);
             }
         }
 
+        /// <summary> Invokes a command based on the given parameters and index. </summary>
+        /// <param name="index"> The index of the command in CommandList. </param>
+        /// <param name="parameters"> Possible parameter values to invoke the event with. </param>
+        public virtual void InvokeCommandBasedOnType(int index, string[] parameters)
+        {
+            if (CommandList[index] as Command != null)
+                (CommandList[index] as Command).Invoke();
+            else if (CommandList[index] as Command<int> != null)
+                (CommandList[index] as Command<int>).Invoke(int.Parse(parameters[1]));
+            else if (CommandList[index] as Command<float> != null)
+                (CommandList[index] as Command<float>).Invoke(float.Parse(parameters[1]));
+            else if (CommandList[index] as Command<string> != null)
+                (CommandList[index] as Command<string>).Invoke(parameters[1]);
+        }
+
         /// <summary> Set's this console equal to null. </summary>
-        public void RemoveConsole()
+        internal void RemoveConsole()
         {
             Console = null;
         }

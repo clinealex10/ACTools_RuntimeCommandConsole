@@ -2,10 +2,24 @@
 <p> All notable changes to this project will be documented in this file. </p>
 
 ## [Unreleased Changes]
-
 ### Changes:
 <ul>
 	<li> </il>
+</ul>
+<hr/>
+
+## [1.2.1] - 2020-10-04
+
+### Additions:
+<ul>
+	<li>ResetList() method added to CommandCollections.cs.</il>
+	<li>ResetList() called in ConsoleCavas.cs's OnDestroyMethod.</il>
+</ul>
+
+### Changes:
+<ul>
+	<li>Changes made to better allow for extension from users.</il>
+	<li>Bug Fix: Caret not going to end of input value when click a help button or suggestion button.</il>
 </ul>
 <hr/>
 
