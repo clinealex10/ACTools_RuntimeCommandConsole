@@ -8,6 +8,13 @@
 </ul>
 <hr/>
 
+## [1.2.4] - 2020-10-13
+### Changes:
+<ul>
+	<li>Bug Fix: Issue with multiple player input components in a scene.</il>
+</ul>
+<hr/>
+
 ## [1.2.3] - 2020-10-05
 ### Changes:
 <ul>

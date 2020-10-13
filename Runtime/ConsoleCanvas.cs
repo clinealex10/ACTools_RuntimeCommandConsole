@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
 
 namespace ACTools.RuntimeCommandConsole
 {
@@ -47,8 +49,15 @@ namespace ACTools.RuntimeCommandConsole
             CommandCollection.ResetList();
         }
 
+        /// <summary> Sets up the input device for this canvas. </summary>
+        internal void SetInputDevice()
+        {
+            InputUser.PerformPairingWithDevice(Keyboard.current, user: GetComponent<PlayerInput>().user);
+            GetComponent<PlayerInput>().user.ActivateControlScheme("KeyboardMouse");
+        }
+
         /// <summary> Toogles the Debug Console GUI on and off. </summary>
-        internal void OnToggleConsole()
+        public void OnToggleConsole()
         {
             InputValue = "";
             debugCanvas.enabled = !debugCanvas.enabled;
@@ -59,7 +68,7 @@ namespace ACTools.RuntimeCommandConsole
         }
 
         /// <summary> Toogles the help GUI on and off. </summary>
-        internal void OnToggleHelp()
+        public void OnToggleHelp()
         {
             if (!helpView.gameObject.activeSelf)
                 DrawScrollingItems(helpContent, ConsoleController.Instance.CommandList);
@@ -68,7 +77,7 @@ namespace ACTools.RuntimeCommandConsole
         }
 
         /// <summary> Selects the input field. </summary>
-        internal void SelectInputField()
+        public void SelectInputField()
         {
             if (ShowConsole)
                 inputField.Select();

@@ -27,6 +27,7 @@ namespace ACTools.RuntimeCommandConsole
 
             GameObject newConsole = Instantiate(Instance.ConsolePrefab);
             Instance.Console = newConsole.GetComponent<ConsoleCanvas>();
+            Instance.Console.SetInputDevice();
 
             CommandCollection.AddCommand("help", "Displays all of the commands this console has.", "help", () => Instance.Console.OnToggleHelp());
             CommandCollection.AddCommand("command_console_creator", 
