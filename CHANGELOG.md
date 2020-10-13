@@ -4,7 +4,7 @@
 ## [Unreleased Changes]
 ### Changes:
 <ul>
-	<li> </il>
+	<li>Bug Fix: Issue with multiple player input components in a scene.</il>
 </ul>
 <hr/>
 
