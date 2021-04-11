@@ -9,6 +9,27 @@
 </ul>
 <hr/>
 
+## [1.1.1] - 2021-04-11
+
+### Changes:
+<ul>
+	<li>Updated ACTools_Core.md file.</il>
+	<li>Updated package.json file.</il>
+</ul>
+<hr/>
+
+## [1.1.0] - 2021-04-09
+
+### Additions:
+<ul>
+	<li>Added GameEvent.cs and GameEventListener.cs scripts.</il>
+	<li>Added GameEvent_Bool.cs and GameEventListener_Bool.cs scripts.</il>
+	<li>Added GameEvent_Float.cs and GameEventListener_Float.cs scripts.</il>
+	<li>Added GameEvent_Int.cs and GameEventListener_Int.cs scripts.</il>
+	<li>Added GameEvent_String.cs and GameEventListener_String.cs scripts.</il>
+</ul>
+<hr/>
+
 ## [1.0.1] - 2020-09-30
 
 ### Changes:

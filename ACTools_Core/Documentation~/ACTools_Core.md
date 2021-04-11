@@ -11,10 +11,324 @@
 ### Custom UnityEvents
 <ul>
 	<li>
-		<p>public class StringEvent : UnityEvent<string></p>
+		public class StringEvent : UnityEvent<string>
+	</li>
+	<li>
 		<p>public class BoolEvent : UnityEvent<bool></p>
+	</li>
+	<li>
 		<p>public class IntEvent : UnityEvent<int></p>
+	</li>
+	<li>
 		<p>public class FloatEvent : UnityEvent<float></p>
+	</li>
+</ul>
+<br>
+<hr/>
+
+### public class GameEvent : ScriptableObject
+<ul>
+	<li> Fields
+		<ul>
+			<li>
+				<p>protected List&lt;GameEventListener&gt; listeners</p>
+				<p>Holds a collection of listeners to this GameEvent.</p>
+			</li>
+		</ul>
+	</li>
+	<li> Methods
+		<ul>
+			<li>
+				<p>public virtual void Register(GameEventListener listener)</p>
+				<p>Adds a listener to this GameEvent.</p>
+				<p>listener: Listener to add.</p>
+			</li>
+			<li>
+				<p>public virtual void Unregister(GameEventListener listener)</p>
+				<p>Removes a listener to this GameEvent.</p>
+				<p>listener: Listener to remove.</p>
+			</li>
+			<li>
+				<p>public virtual void Invoke()</p>
+				<p>Invokes this GameEvent.</p>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br>
+<hr/>
+
+### public class GameEvent_String : ScriptableObject
+<ul>
+	<li> Fields
+		<ul>
+			<li>
+				<p>protected List&lt;GameEventListener_String&gt; listeners</p>
+				<p>Holds a collection of listeners to this GameEvent.</p>
+			</li>
+		</ul>
+	</li>
+	<li> Methods
+		<ul>
+			<li>
+				<p>public virtual void Register(GameEventListener_String listener)</p>
+				<p>Adds a listener to this GameEvent.</p>
+				<p>listener: Listener to add.</p>
+			</li>
+			<li>
+				<p>public virtual void Unregister(GameEventListener_String listener)</p>
+				<p>Removes a listener to this GameEvent.</p>
+				<p>listener: Listener to remove.</p>
+			</li>
+			<li>
+				<p>public virtual void Invoke(string argument)</p>
+				<p>Invokes this GameEvent.</p>
+				<p>argument: Argument to pass through from the event.</p>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br>
+<hr/>
+
+### public class GameEvent_Bool : ScriptableObject
+<ul>
+	<li> Fields
+		<ul>
+			<li>
+				<p>protected List&lt;GameEventListener_Bool&gt; listeners</p>
+				<p>Holds a collection of listeners to this GameEvent.</p>
+			</li>
+		</ul>
+	</li>
+	<li> Methods
+		<ul>
+			<li>
+				<p>public virtual void Register(GameEventListener_Bool listener)</p>
+				<p>Adds a listener to this GameEvent.</p>
+				<p>listener: Listener to add.</p>
+			</li>
+			<li>
+				<p>public virtual void Unregister(GameEventListener_Bool listener)</p>
+				<p>Removes a listener to this GameEvent.</p>
+				<p>listener: Listener to remove.</p>
+			</li>
+			<li>
+				<p>public virtual void Invoke(bool argument)</p>
+				<p>Invokes this GameEvent.</p>
+				<p>argument: Argument to pass through from the event.</p>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br>
+<hr/>
+
+### public class GameEvent_Int : ScriptableObject
+<ul>
+	<li> Fields
+		<ul>
+			<li>
+				<p>protected List&lt;GameEventListener_Int&gt; listeners</p>
+				<p>Holds a collection of listeners to this GameEvent.</p>
+			</li>
+		</ul>
+	</li>
+	<li> Methods
+		<ul>
+			<li>
+				<p>public virtual void Register(GameEventListener_Int listener)</p>
+				<p>Adds a listener to this GameEvent.</p>
+				<p>listener: Listener to add.</p>
+			</li>
+			<li>
+				<p>public virtual void Unregister(GameEventListener_Int listener)</p>
+				<p>Removes a listener to this GameEvent.</p>
+				<p>listener: Listener to remove.</p>
+			</li>
+			<li>
+				<p>public virtual void Invoke(int argument)</p>
+				<p>Invokes this GameEvent.</p>
+				<p>argument: Argument to pass through from the event.</p>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br>
+<hr/>
+
+### public class GameEvent_Float : ScriptableObject
+<ul>
+	<li> Fields
+		<ul>
+			<li>
+				<p>protected List&lt;GameEventListener_Float&gt; listeners</p>
+				<p>Holds a collection of listeners to this GameEvent.</p>
+			</li>
+		</ul>
+	</li>
+	<li> Methods
+		<ul>
+			<li>
+				<p>public virtual void Register(GameEventListener_Float listener)</p>
+				<p>Adds a listener to this GameEvent.</p>
+				<p>listener: Listener to add.</p>
+			</li>
+			<li>
+				<p>public virtual void Unregister(GameEventListener_Float listener)</p>
+				<p>Removes a listener to this GameEvent.</p>
+				<p>listener: Listener to remove.</p>
+			</li>
+			<li>
+				<p>public virtual void Invoke(float argument)</p>
+				<p>Invokes this GameEvent.</p>
+				<p>argument: Argument to pass through from the event.</p>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br>
+<hr/>
+
+### public class GameEventListener : Monobehaviour
+<ul>
+	<li> Fields
+		<ul>
+			<li>
+				<p>protected GameEvent gameEvent</p>
+				<p>GameEvent to listen to.</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<p>public UnityEvent Response</p>
+				<p>Set of responses when the GameEvent is invoked.</p>
+			</li>
+		</ul>
+	</li>
+	<li> Methods
+		<ul>
+			<li>
+				<p>public virtual void OnEventRaised()</p>
+				<p>Method called when the event is invoked to invoke the Responses.</p>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br>
+<hr/>
+
+### public class GameEventListener_String : Monobehaviour
+<ul>
+	<li> Fields
+		<ul>
+			<li>
+				<p>protected GameEvent_String gameEvent</p>
+				<p>GameEvent to listen to.</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<p>public StringEvent Response</p>
+				<p>Set of responses when the GameEvent is invoked.</p>
+			</li>
+		</ul>
+	</li>
+	<li> Methods
+		<ul>
+			<li>
+				<p>public virtual void OnEventRaised(string argument)</p>
+				<p>Method called when the event is invoked to invoke the Responses.</p>
+				<p>argument: Argument to pass through from the event.</p>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br>
+<hr/>
+
+### public class GameEventListener_Bool : Monobehaviour
+<ul>
+	<li> Fields
+		<ul>
+			<li>
+				<p>protected GameEvent_Bool gameEvent</p>
+				<p>GameEvent to listen to.</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<p>public BoolEvent Response</p>
+				<p>Set of responses when the GameEvent is invoked.</p>
+			</li>
+		</ul>
+	</li>
+	<li> Methods
+		<ul>
+			<li>
+				<p>public virtual void OnEventRaised(bool argument)</p>
+				<p>Method called when the event is invoked to invoke the Responses.</p>
+				<p>argument: Argument to pass through from the event.</p>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br>
+<hr/>
+
+### public class GameEventListener_Int : Monobehaviour
+<ul>
+	<li> Fields
+		<ul>
+			<li>
+				<p>protected GameEvent_Int gameEvent</p>
+				<p>GameEvent to listen to.</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<p>public IntEvent Response</p>
+				<p>Set of responses when the GameEvent is invoked.</p>
+			</li>
+		</ul>
+	</li>
+	<li> Methods
+		<ul>
+			<li>
+				<p>public virtual void OnEventRaised(int argument)</p>
+				<p>Method called when the event is invoked to invoke the Responses.</p>
+				<p>argument: Argument to pass through from the event.</p>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br>
+<hr/>
+
+### public class GameEventListener_Float : Monobehaviour
+<ul>
+	<li> Fields
+		<ul>
+			<li>
+				<p>protected GameEvent_Float gameEvent</p>
+				<p>GameEvent to listen to.</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<p>public FloatEvent Response</p>
+				<p>Set of responses when the GameEvent is invoked.</p>
+			</li>
+		</ul>
+	</li>
+	<li> Methods
+		<ul>
+			<li>
+				<p>public virtual void OnEventRaised(float argument)</p>
+				<p>Method called when the event is invoked to invoke the Responses.</p>
+				<p>argument: Argument to pass through from the event.</p>
+			</li>
+		</ul>
 	</li>
 </ul>
 <br>
