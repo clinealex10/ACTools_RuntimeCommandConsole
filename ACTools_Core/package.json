@@ -1,6 +1,6 @@
 {
   "name": "com.actools.core",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "displayName": "ACTools: Core",
   "description": "This package contains core parts to ACTools packages. This includes things like extension methods, custom attributes, and dependencies for other ACTools that are made.",
   "unity": "2019.4",
