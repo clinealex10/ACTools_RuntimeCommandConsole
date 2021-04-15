@@ -12,7 +12,7 @@
 
 ### Changes:
 <ul>
-	<li>Bug Fix: Assemblies not being refereneced correctly.</il>
+	<li>Bug Fix: Assemblies not being referenced correctly.</il>
 	<li>Updated package.json updated.</il>
 </ul>
 <hr/>
