@@ -8,6 +8,15 @@
 </ul>
 <hr/>
 
+## [1.2.7] - 2021-04-14
+
+### Changes:
+<ul>
+	<li>Bug Fix: Assemblies not being referenced correctly.</il>
+	<li>Updated package.json updated.</il>
+</ul>
+<hr/>
+
 ## [1.2.6] - 2021-04-13
 
 ### Changes:

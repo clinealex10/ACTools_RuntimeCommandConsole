@@ -2,8 +2,8 @@
     "name": "com.actools.runtimecommandconsole.editor",
     "references": [
         "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:4aeb2d3669de95c4292a5dbc090112db",
-        "GUID:9cc8e58cee8137949a654e877a979e13",
+        "GUID:97d3a34ecf4c34e49992afd531182dea",
+        "GUID:1c15b5fc7c88681498d59b0305d6855e",
         "GUID:22478f53c9a95854fbaf96db50ebc097"
     ],
     "includePlatforms": [

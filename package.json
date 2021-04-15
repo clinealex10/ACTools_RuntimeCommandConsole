@@ -1,6 +1,6 @@
 {
   "name": "com.actools.runtimecommandconsole",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "displayName": "ACTools: Runtime Command Console",
   "description": "This runtime command console tool is for developers to create debug commands to can use during the game to amke it easier to debug and test the game.",
   "unity": "2019.4",
