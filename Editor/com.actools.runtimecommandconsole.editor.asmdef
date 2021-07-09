@@ -1,10 +1,10 @@
 {
     "name": "com.actools.runtimecommandconsole.editor",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:97d3a34ecf4c34e49992afd531182dea",
-        "GUID:1c15b5fc7c88681498d59b0305d6855e",
-        "GUID:22478f53c9a95854fbaf96db50ebc097"
+        "Unity.InputSystem",
+        "com.actools.core.runtime",
+        "com.actools.core.editor",
+        "com.actools.runtimecommandconsole.runtime"
     ],
     "includePlatforms": [
         "Editor"

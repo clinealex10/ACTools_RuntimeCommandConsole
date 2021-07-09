@@ -8,6 +8,15 @@
 </ul>
 <hr/>
 
+## [1.3.0] - 2021-07-08
+
+### Changes:
+<ul>
+	<li>The ACTools.Core package is no longer needs to be embedded into this package. However, it is still required for this package to function properly.</il>
+</ul>
+<hr/>
+
+
 ## [1.2.7] - 2021-04-14
 
 ### Changes:
