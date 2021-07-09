@@ -3,6 +3,7 @@
     This debug console is based on Game Dev Guide's Debug Cheat Console: https://www.youtube.com/watch?v=VzOEM-4A2OM&t=0s.
 <p>
     This runtime command console tool is for developers to create commands to can use during the game to make it easier to debug and test the game.
+    This package requires ACTools: Core before it can work properly.
     <br/>
     Feel free to use it for whatever. If you wouldn't mind, please credit me. It would be appreciated!
 </p>
